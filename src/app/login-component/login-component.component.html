@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="card login-card">
+        <div>
+            <!--[ngClass]="color"-->
+            <div><label>Email</label></div>
+            <div><input class="w-100" type="email" [(ngModel)]="loginMail"></div>
+        </div>
+        <div>
+            <div><label>Password</label></div>
+            <div><input class="w-100" type="password" [(ngModel)]="loginPassword"></div>
+        </div>
+        <div class="pt-3 w-50">
+            <!-- <button class="btn btn-primary" type="button" (click)="login()">Login</button> -->
+            <app-ui-button buttonColor="primary" buttonText="Login"></app-ui-button>
+        </div>
+    </div>
+</div>
