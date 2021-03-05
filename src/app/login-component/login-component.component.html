@@ -1,17 +1,29 @@
 <div class="container-fluid">
     <div class="card login-card">
-        <div>
-            <!--[ngClass]="color"-->
-            <div><label>Email</label></div>
-            <div><input class="w-100" type="email" [(ngModel)]="loginMail"></div>
+        <div *ngIf="showErrorMessage">
+            <p class="login-error-msg">Invalid username or password</p>
         </div>
         <div>
-            <div><label>Password</label></div>
-            <div><input class="w-100" type="password" [(ngModel)]="loginPassword"></div>
+            <div>
+                <app-ui-label labelText="Email"></app-ui-label>
+            </div>
+            <div>
+                <app-ui-input-email [(value)]="loginMail"></app-ui-input-email>
+            </div>
         </div>
-        <div class="pt-3 w-50">
-            <!-- <button class="btn btn-primary" type="button" (click)="login()">Login</button> -->
-            <app-ui-button buttonColor="primary" buttonText="Login"></app-ui-button>
+        <div class="pt-3">
+            <div>
+                <app-ui-label labelText="Password"></app-ui-label>
+            </div>
+            <div>
+                <app-ui-input-password [(value)]="loginPassword"></app-ui-input-password>
+            </div>
+        </div>
+        <div class="pt-3">
+            <app-ui-button buttonColor="primary" buttonText="Login" (onButtonClick)="login()"></app-ui-button>
+            <p class="signup-link-text pt-2">Don't have an account?<a class="signup-link"
+                    [routerLink]="['/signup']">Sign
+                    Up</a></p>
         </div>
     </div>
 </div>

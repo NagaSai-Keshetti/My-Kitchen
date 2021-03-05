@@ -8,21 +8,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-component.component.scss']
 })
 export class LoginComponentComponent implements OnInit {
-  loginMail: string;
+  loginMail;
   loginPassword: string;
   validateCredentials: boolean;
-  @Input() color: string;
+  showErrorMessage = false;
   constructor(private appService: AppService,
     private router: Router) { }
 
   ngOnInit(): void {
 
+
+  }
+
+  emailEntered(event) {
+    this.loginMail = event.value;
   }
 
   login() {
     this.validateCredentials = this.appService.validateCredentials(this.loginMail, this.loginPassword);
     if (this.validateCredentials == true) {
-      this.router.navigate(['/menu-categories']);
+      this.router.navigate(['/home']);
+      this.showErrorMessage = false;
+    } else {
+      this.showErrorMessage = true;
     }
   }
 

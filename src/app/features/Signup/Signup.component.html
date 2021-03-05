@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="card sign-up-card">
+        <div class="text-center">
+            <p style="font-size:18px;font-weight: bold;">Create an account</p>
+        </div>
+        <div>
+            <div>
+                <app-ui-label labelText="First Name"></app-ui-label>
+            </div>
+            <div>
+                <app-ui-input-text [(value)]="firstName"></app-ui-input-text>
+            </div>
+        </div>
+        <div class="pt-2">
+            <div>
+                <app-ui-label labelText="Last Name"></app-ui-label>
+            </div>
+            <div>
+                <app-ui-input-text [(value)]="lastName"></app-ui-input-text>
+            </div>
+        </div>
+        <div class="pt-2">
+            <div>
+                <app-ui-label labelText="Email"></app-ui-label>
+            </div>
+            <div>
+                <app-ui-input-email [(value)]="email"></app-ui-input-email>
+            </div>
+        </div>
+        <div class="pt-2">
+            <div>
+                <app-ui-label labelText="Password"></app-ui-label>
+            </div>
+            <div>
+                <app-ui-input-password [(value)]="password" [showConfirmPasswordField]="true"></app-ui-input-password>
+            </div>
+        </div>
+        <div class="pt-2">
+            <app-ui-button buttonColor="primary" buttonText="Signup" (onButtonClick)="signup()"></app-ui-button>
+        </div>
+    </div>
+</div>

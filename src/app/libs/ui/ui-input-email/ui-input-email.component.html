@@ -1,0 +1,3 @@
+<input type="email" [value]="value" (input)="onInput(email.value)" #email class="w-100"
+    [ngClass]="{'invalidEmail': !isValidEmailFormat}">
+<p *ngIf="!isValidEmailFormat" class='invalidEmailText'>The input is not correct</p>

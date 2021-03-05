@@ -1,10 +1,25 @@
 .login-card{
     width: 30%;
     top: 175px;
-    height: 250px;
     left: 500px;
     padding: 30px;
 }
 .green{
     border:10px solid green
+}
+
+.signup-link-text{
+    font-size: 10px;
+}
+
+.signup-link{
+    text-decoration: dashed;
+    color: #007bff;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.login-error-msg{
+    color: red;
+    font-size: 13px;
 }
